@@ -20,13 +20,13 @@
 
 	<div class="container">
 		<div class="blog-header">
-			<h1 class="blog-title">百叶窗式图片效果</h1>
+			<h1 class="blog-title">滚动式图片效果</h1>
 		</div>
 
 		<div class="row">
 			<div class="col-sm-12 blog-main">
 				<div class="blog-post">
-					<p class="blog-post-meta">August 18, 2015 by <a href="#">nnngttdd</a></p>
+					<p class="blog-post-meta">August 19, 2015 by <a href="#">nnngttdd</a></p>
 					<div class="blog-example">
 						<div id="pic">
 							<ul>
@@ -49,8 +49,34 @@
 						</div>
 
 					</div>
+					<p>图片是从新浪微博上的广告下载的</P>
 					<pre>
 						<code>
+	var options = {
+		'width' : 600,
+		//图片width(必填)
+		'height' : 80,
+		//图片height(必填)
+		'ol' : {
+			'fontNormalC' : 'black',
+			//数字标文字正常颜色（选填）
+			'fontNormalB' : 'rgba(255,255,255,0.5)',
+			//数字标背景正常颜色（选填）
+			'fontActiceC' : '#fff',
+			//数字标文字激活颜色（选填）
+			'fontActiceB' : 'rgba(255,102,0,0.8)',
+			//数字标背景激活颜色（选填）
+			'width' : 15,
+			//数字标宽度（选填）
+			'height' : 15
+			//数字标高度（选填）
+		},
+		'transitionTime' : 3
+		//图片滚动时间间隔，单位秒（选填）
+	};
+
+	var myPictures = new BPictures('pic',options);
+	//两个参数 第一个为操作的div 第二个为配置的属性
 						</code>
 					</pre>
 				</div><!-- /.blog-post -->
@@ -68,6 +94,20 @@
 	<script type="text/javascript" src="js/libs/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/BPictures.js"></script>
 	<script type="text/javascript">
+		var options = {
+			'width' : 600,//图片width(必填)
+			'height' : 80,//图片height(必填)
+			'ol' : {
+				'fontNormalC' : 'black',//数字标文字正常颜色（选填）
+				'fontNormalB' : 'rgba(255,255,255,0.5)' ,//数字标背景正常颜色（选填）
+				'fontActiceC' : '#fff',//数字标文字激活颜色（选填）
+				'fontActiceB' : 'rgba(255,102,0,0.8)',//数字标背景激活颜色（选填）
+				'width' : 15,//数字标宽度（选填）
+				'height' : 15//数字标高度（选填）
+			},
+			'transitionTime' : 3//图片滚动时间间隔（选填）
+		};
+		var myPictures = new BPictures('pic',options);
 	</script>
 </body>
 </html>
